@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Your plugin id and version
+     of this XML document, the
+     version must be set to "1" -->
+<go-plugin
+        id="com.example.idfc.SCMartifactory"
+        version="1">
+    <about>
+        <!-- The name of your plugin -->
+        <name>IDFC SCM Artifactory</name>
+        <!--  The version of your plugin -->
+        <version>0.0.2</version>
+        <!-- The minimum version of GoCD that this plugin requires -->
+        <target-go-version>19.1.0</target-go-version>
+        <!-- A longer description of your plugin  -->
+        <description>Pulls artifacts as materials</description>
+
+        <!-- Tell us who you are -->
+        <vendor>
+            <name>IDFC First</name>
+            <url>https://www.idfcfirstbank.com</url>
+        </vendor>
+
+        <!-- If this plugin only supports certain OSes -->
+        <target-os>
+            <value>Linux</value>
+            <value>Windows</value>
+        </target-os>
+    </about>
+</go-plugin>
