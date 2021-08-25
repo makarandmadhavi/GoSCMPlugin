@@ -222,7 +222,7 @@ public class ArtifactoryClient {
 			if (isDir(href)) {
 				boolean matches = true;
 				if (pattern != null) {
-					matches = pattern.matcher(href).matches();
+					matches = pattern.matcher(href).find();
 				}
 				if (matches) {
 					Revision rev = elementToRev(link, since, url);

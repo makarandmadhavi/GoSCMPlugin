@@ -9,7 +9,7 @@
         <!-- The name of your plugin -->
         <name>IDFC SCM Artifactory</name>
         <!--  The version of your plugin -->
-        <version>0.0.2</version>
+        <version>0.0.3</version>
         <!-- The minimum version of GoCD that this plugin requires -->
         <target-go-version>19.1.0</target-go-version>
         <!-- A longer description of your plugin  -->
