@@ -214,15 +214,20 @@ public class ArtifactoryClient {
 			throws ClientProtocolException, IOException {
 		List<Revision> revisions = new ArrayList<>();
 		Elements links = document.select("a");
-		Pattern pattern = versionRegex != null
-			? Pattern.compile(versionRegex)
-			: null;
+        Pattern pattern;
+		if( versionRegex != null){
+			versionRegex += "/";
+			pattern = Pattern.compile(versionRegex);
+		}
+		else {
+			pattern = null;
+		}
 		for (Element link : links) {
 			String href = link.attr("href");
 			if (isDir(href)) {
 				boolean matches = true;
 				if (pattern != null) {
-					matches = pattern.matcher(href).find();
+					matches = pattern.matcher(href).matches();
 				}
 				if (matches) {
 					Revision rev = elementToRev(link, since, url);
